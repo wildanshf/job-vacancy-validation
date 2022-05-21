@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Job Vacancy Validation</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="hello_welcome_back">HELLO, \nWELCOME BACK</string>
+    <string name="login_page_sub_title">Sign in to continue</string>
+    <string name="login">Login</string>
+    <string name="register_title">JOIN US!</string>
+    <string name="name">Name</string>
+    <string name="register">Register</string>
+    <string name="register_sub_title">Fill your data below to start joining us</string>
+    <string name="validation">Validation</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+    <string name="setting">Setting</string>
+    <string name="about_us">About Us</string>
+    <string name="coming_soon">Coming Soon</string>
 </resources>
