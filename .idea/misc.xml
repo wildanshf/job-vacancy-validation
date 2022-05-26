@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Nirvana/Desktop/Capstone/job-vacancy-validation/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2265" />
+        <entry key="..\:/Users/Nirvana/Desktop/Capstone/job-vacancy-validation/app/src/main/res/drawable/ic_validation.xml" value="0.121" />
+        <entry key="..\:/Users/Nirvana/Desktop/Capstone/job-vacancy-validation/app/src/main/res/layout/activity_history.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Nirvana/Desktop/Capstone/job-vacancy-validation/app/src/main/res/layout/activity_home.xml" value="0.6" />
+        <entry key="..\:/Users/Nirvana/Desktop/Capstone/job-vacancy-validation/app/src/main/res/layout/activity_login.xml" value="0.176" />
+        <entry key="..\:/Users/Nirvana/Desktop/Capstone/job-vacancy-validation/app/src/main/res/layout/activity_register.xml" value="0.2" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/drawable/ic_launcher_background.xml" value="0.141" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.176" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/drawable/ic_register_banner.xml" value="0.1" />
