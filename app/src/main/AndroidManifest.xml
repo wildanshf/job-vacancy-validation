@@ -10,8 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JobVacancyValidation">
         <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.validation.ValidationActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.register.RegisterActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".ui.home.HomeActivity"
             android:exported="false" />
