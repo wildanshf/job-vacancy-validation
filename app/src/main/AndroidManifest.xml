@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JobVacancyValidation">
-<!--        <activity-->
-<!--            android:name=".ui.history.HistoryActivity"-->
-<!--            android:exported="false" />-->
+        <activity
+            android:name=".ui.profile.ProfileEditActivity"
+            android:exported="false" />
+        <!-- <activity -->
+        <!-- android:name=".ui.history.HistoryActivity" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".ui.splash.SplashActivity"
             android:exported="true">
