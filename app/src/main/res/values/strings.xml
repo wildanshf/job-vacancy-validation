@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Job Vacancy Validation</string>
+    <string name="app_splash_name">VALICAT</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="hello_welcome_back">HELLO, \nWELCOME BACK</string>
@@ -18,4 +19,6 @@
     <string name="test">Test</string>
     <string name="halo_janice_elizabeth">Halo, Janice Elizabeth</string>
     <string name="home_greetings">What’s on your mind today?</string>
+    <string name="tab_1">My History</string>
+    <string name="tab_2">Other User History</string>
 </resources>
