@@ -18,7 +18,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar?.hide()
-
+        
         binding.validationCard.setOnClickListener{
             val validationIntent = Intent(this@HomeActivity, ValidationActivity::class.java)
             startActivity(validationIntent)
@@ -29,6 +29,10 @@ class HomeActivity : AppCompatActivity() {
             val profileIntent = Intent(this@HomeActivity, ProfileActivity::class.java)
             startActivity(profileIntent)
             finish()
+            
+        binding.logoutButton.setOnClickListener {
+            val logoutIntent = Intent(this@HomeActivity, LoginActivity::class.java)
+            startActivity(logoutIntent)
         }
     }
 }
