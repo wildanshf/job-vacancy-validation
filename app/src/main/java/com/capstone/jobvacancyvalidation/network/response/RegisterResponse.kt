@@ -1,4 +1,6 @@
 package com.capstone.jobvacancyvalidation.network.response
 
-class RegisterResponse {
-}
+data class RegisterResponse (
+    val error: Boolean,
+    val message: String
+)
