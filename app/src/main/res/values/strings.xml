@@ -22,4 +22,15 @@
     <string name="validation_sub_title">Fill In Job Vacancies</string>
     <string name="tab_1">My History</string>
     <string name="tab_2">Other User History</string>
+    <string name="change_profile_photo">Change profile photo</string>
+    <string name="phone">phone</string>
+    <string name="Phone">Phone</string>
+    <string name="Name">name</string>
+    <string name="bio">bio</string>
+    <string name="Bio">Bio</string>
+    <string name="Birthday">Birthday</string>
+    <string name="birthday">birthday</string>
+    <string name="Country">Country</string>
+    <string name="country">country</string>
+    <string name="update_profile">Update Profile</string>
 </resources>
