@@ -16,7 +16,7 @@ class SplashActivity : AppCompatActivity() {
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.hide()
+        supportActionBar?.hide();
 
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(applicationContext, LoginActivity::class.java)

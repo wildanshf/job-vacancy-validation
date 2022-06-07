@@ -9,5 +9,6 @@
     <color name="grey">#393E46</color>
     <color name="light_blue">#00ADB5</color>
     <color name="light_grey">#EEEEEE</color>
+    <color name="very_light_grey">#9a9a9a</color>
     <color name="shrine_red">#C70000</color>
 </resources>

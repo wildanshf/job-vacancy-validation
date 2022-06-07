@@ -1,6 +1,6 @@
 package com.capstone.jobvacancyvalidation.network.response
 
 data class RegisterResponse (
-    val error: Boolean,
+    val error: Int,
     val message: String
 )

@@ -15,7 +15,7 @@ class ApiConfig {
             .build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://reqres.in/api/")
+            .baseUrl("https://fakejob.uc.r.appspot.com/v1/user/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

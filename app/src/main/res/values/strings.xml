@@ -33,4 +33,6 @@
     <string name="Country">Country</string>
     <string name="country">country</string>
     <string name="update_profile">Update Profile</string>
+    <string name="success_login">Successfully Login</string>
+    <string name="invalid_credentials">Invalid Credentials</string>
 </resources>

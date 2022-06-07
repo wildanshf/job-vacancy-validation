@@ -69,29 +69,19 @@
             android:layout_height="wrap_content"
             android:text="@string/name"
             android:textSize="16sp"
+            android:textColor="@color/very_light_grey"
             android:textStyle="bold"
-            android:textColor="@color/light_grey" />
+            android:paddingStart="4dp"/>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/name_input"
+        <EditText
+            android:id="@+id/edit_text_name"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginTop="4dp"
-            android:hint="@string/Name"
-            app:boxBackgroundColor="@color/grey"
-            app:boxStrokeWidth="0dp"
-            app:boxCornerRadiusTopStart="5dp"
-            app:boxCornerRadiusTopEnd="5dp"
-            app:boxCornerRadiusBottomStart="5dp"
-            app:boxCornerRadiusBottomEnd="5dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/light_grey"
-                android:textColorHint="@color/light_grey"
-                app:hintTextColor="@color/light_grey" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Janice Elizabeth"
+            android:textColor="@color/light_grey"
+            app:backgroundTint="@color/very_light_grey" />
 
         <TextView
             android:layout_width="match_parent"
@@ -99,29 +89,19 @@
             android:text="@string/Bio"
             android:layout_marginTop="12dp"
             android:textSize="16sp"
+            android:textColor="@color/very_light_grey"
             android:textStyle="bold"
-            android:textColor="@color/light_grey" />
+            android:paddingStart="4dp"/>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/bio_input"
+        <EditText
+            android:id="@+id/edit_text_bio"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginTop="4dp"
-            android:hint="@string/bio"
-            app:boxBackgroundColor="@color/grey"
-            app:boxStrokeWidth="0dp"
-            app:boxCornerRadiusTopStart="5dp"
-            app:boxCornerRadiusTopEnd="5dp"
-            app:boxCornerRadiusBottomStart="5dp"
-            app:boxCornerRadiusBottomEnd="5dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/light_grey"
-                android:textColorHint="@color/light_grey"
-                app:hintTextColor="@color/light_grey" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:backgroundTint="@color/very_light_grey"
+            android:text="I love anime and kpop :D"
+            android:textColor="@color/light_grey"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -129,30 +109,19 @@
             android:text="@string/Phone"
             android:layout_marginTop="12dp"
             android:textSize="16sp"
+            android:textColor="@color/very_light_grey"
             android:textStyle="bold"
-            android:textColor="@color/light_grey" />
+            android:paddingStart="4dp"/>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/phone_input"
+        <EditText
+            android:id="@+id/edit_text_phone"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginTop="4dp"
-            android:hint="@string/phone"
-            app:boxBackgroundColor="@color/grey"
-            app:boxStrokeWidth="0dp"
-            app:boxCornerRadiusTopStart="5dp"
-            app:boxCornerRadiusTopEnd="5dp"
-            app:boxCornerRadiusBottomStart="5dp"
-            app:boxCornerRadiusBottomEnd="5dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/light_grey"
-                android:textColorHint="@color/light_grey"
-                app:hintTextColor="@color/light_grey" />
-        </com.google.android.material.textfield.TextInputLayout>
-
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone"
+            app:backgroundTint="@color/very_light_grey"
+            android:text="+6281284555365"
+            android:textColor="@color/light_grey"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -160,29 +129,19 @@
             android:text="@string/Birthday"
             android:layout_marginTop="12dp"
             android:textSize="16sp"
+            android:textColor="@color/very_light_grey"
             android:textStyle="bold"
-            android:textColor="@color/light_grey" />
+            android:paddingStart="4dp"  />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/birthday_input"
+        <EditText
+            android:id="@+id/edit_text_birthday"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginTop="4dp"
-            android:hint="@string/birthday"
-            app:boxBackgroundColor="@color/grey"
-            app:boxStrokeWidth="0dp"
-            app:boxCornerRadiusTopStart="5dp"
-            app:boxCornerRadiusTopEnd="5dp"
-            app:boxCornerRadiusBottomStart="5dp"
-            app:boxCornerRadiusBottomEnd="5dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/light_grey"
-                android:textColorHint="@color/light_grey"
-                app:hintTextColor="@color/light_grey" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            app:backgroundTint="@color/very_light_grey"
+            android:text="January 1, 2000"
+            android:textColor="@color/light_grey"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -190,40 +149,19 @@
             android:text="@string/Country"
             android:layout_marginTop="12dp"
             android:textSize="16sp"
+            android:textColor="@color/very_light_grey"
             android:textStyle="bold"
-            android:textColor="@color/light_grey" />
+            android:paddingStart="4dp"  />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/country_input"
+        <EditText
+            android:id="@+id/edit_text_nationality"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginTop="4dp"
-            android:hint="@string/country"
-            app:boxBackgroundColor="@color/grey"
-            app:boxStrokeWidth="0dp"
-            app:boxCornerRadiusTopStart="5dp"
-            app:boxCornerRadiusTopEnd="5dp"
-            app:boxCornerRadiusBottomStart="5dp"
-            app:boxCornerRadiusBottomEnd="5dp">
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:backgroundTint="@color/very_light_grey"
+            android:text="Indonesia"
+            android:textColor="@color/light_grey"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/light_grey"
-                android:textColorHint="@color/light_grey"
-                app:hintTextColor="@color/light_grey" />
-        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
-
-    <Button
-        android:id="@+id/update_profile_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:text="@string/update_profile"
-        app:layout_constraintStart_toStartOf="@id/linlay"
-        app:layout_constraintTop_toBottomOf="@id/linlay"
-        app:layout_constraintEnd_toEndOf="@id/linlay"/>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
