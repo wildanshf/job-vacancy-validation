@@ -35,4 +35,8 @@
     <string name="update_profile">Update Profile</string>
     <string name="success_login">Successfully Login</string>
     <string name="invalid_credentials">Invalid Credentials</string>
+    <string name="validate">Validate</string>
+    <string name="home_hint">Validate a job vacancy with VALICAT!</string>
+    <string name="home_hint_description">Insert a job vacancy broadcast into the text field above and press the validate button to start the magic!</string>
+    <string name="paste_button">Paste Button</string>
 </resources>

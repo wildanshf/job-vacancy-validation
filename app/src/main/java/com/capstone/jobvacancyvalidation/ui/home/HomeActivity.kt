@@ -19,19 +19,19 @@ class HomeActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        binding.validationCard.setOnClickListener {
-            val validationIntent = Intent(this@HomeActivity, ValidationActivity::class.java)
-            startActivity(validationIntent)
-        }
-
-        binding.profileCard.setOnClickListener {
-            val profileIntent = Intent(this@HomeActivity, ProfileActivity::class.java)
-            startActivity(profileIntent)
-        }
-
-        binding.logoutButton.setOnClickListener {
-            val logoutIntent = Intent(this@HomeActivity, LoginActivity::class.java)
-            startActivity(logoutIntent)
-        }
+//        binding.validationCard.setOnClickListener {
+//            val validationIntent = Intent(this@HomeActivity, ValidationActivity::class.java)
+//            startActivity(validationIntent)
+//        }
+//
+//        binding.profileCard.setOnClickListener {
+//            val profileIntent = Intent(this@HomeActivity, ProfileActivity::class.java)
+//            startActivity(profileIntent)
+//        }
+//
+//        binding.logoutButton.setOnClickListener {
+//            val logoutIntent = Intent(this@HomeActivity, LoginActivity::class.java)
+//            startActivity(logoutIntent)
+//        }
     }
 }

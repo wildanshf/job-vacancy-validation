@@ -14,4 +14,13 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="Theme.JobVacancyValidation.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.JobVacancyValidation.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.JobVacancyValidation.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>
