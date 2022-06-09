@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Toast
 import com.capstone.jobvacancyvalidation.R
 import com.capstone.jobvacancyvalidation.data.Login
+import com.capstone.jobvacancyvalidation.data.UserPreferences
 import com.capstone.jobvacancyvalidation.databinding.ActivityLoginBinding
 import com.capstone.jobvacancyvalidation.network.api.ApiConfig
 import com.capstone.jobvacancyvalidation.network.response.LoginResponse
@@ -19,12 +20,18 @@ import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
+    private lateinit var mPreferences: UserPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        mPreferences = UserPreferences(this)
 
+        if (mPreferences.getToken() != ""){
+            startActivity(Intent((this@LoginActivity), HomeActivity::class.java))
+            finish()
+        }
         supportActionBar?.hide()
 
         binding.tvRegisterIntent.setOnClickListener {
@@ -56,16 +63,14 @@ class LoginActivity : AppCompatActivity() {
                     response: Response<LoginResponse>
                 ) {
                     if (response.code() == 200) {
-                        val body = response.body()
-
-                        //loginViewModel.saveUser(body?.userid, body?.token)
+                        mPreferences.setToken(response.body()!!.token)
 
                         binding.loginButton.isEnabled = true
                         binding.pbLogin.visibility = View.INVISIBLE
 
                         Toast.makeText(applicationContext, getString(R.string.success_login), Toast.LENGTH_SHORT).show()
                         startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
-
+                        finish()
                     } else {
 
                         binding.loginButton.isEnabled = true
