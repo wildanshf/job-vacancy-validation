@@ -43,4 +43,8 @@
     <string name="empty_input_warning">Field is empty!</string>
     <string name="validation_negative_result">Fraud Job</string>
     <string name="validation_positive_result">Valid Job</string>
+    <string name="validate">Validate</string>
+    <string name="home_hint">Validate a job vacancy with VALICAT!</string>
+    <string name="home_hint_description">Insert a job vacancy broadcast into the text field above and press the validate button to start the magic!</string>
+    <string name="paste_button">Paste Button</string>
 </resources>

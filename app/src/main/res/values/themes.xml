@@ -41,4 +41,14 @@
         <item name="android:textSize">14sp</item>
         <item name="rippleColor">#a4a4a4</item>
     </style>
+  
+    <style name="Theme.JobVacancyValidation.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.JobVacancyValidation.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.JobVacancyValidation.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>
