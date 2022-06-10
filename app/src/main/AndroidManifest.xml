@@ -12,9 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JobVacancyValidation">
         <activity
+            android:name=".ui.MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main" />
+        <activity
             android:name=".ui.profile.ProfileEditActivity"
-            android:exported="false" />
-        <!-- <activity -->
+            android:exported="false" /> <!-- <activity -->
         <!-- android:name=".ui.history.HistoryActivity" -->
         <!-- android:exported="false" /> -->
         <activity
@@ -30,7 +33,7 @@
             android:name=".ui.register.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.home.HomeActivity"
+            android:name=".ui.homeactivity.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".ui.login.LoginActivity"
