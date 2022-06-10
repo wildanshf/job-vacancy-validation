@@ -67,7 +67,9 @@
             android:layout_height="wrap_content"
             android:textColor="@color/light_grey"
             android:textColorHint="@color/light_grey"
-            app:hintTextColor="@color/light_grey" />
+            android:inputType="textEmailAddress"
+            app:hintTextColor="@color/light_grey"
+            android:maxLines="1"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -92,7 +94,8 @@
             android:inputType="textPassword"
             android:textColor="@color/light_grey"
             android:textColorHint="@color/light_grey"
-            app:hintTextColor="@color/light_grey" />
+            app:hintTextColor="@color/light_grey"
+            android:maxLines="1"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
