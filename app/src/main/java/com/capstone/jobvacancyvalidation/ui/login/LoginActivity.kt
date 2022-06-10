@@ -12,7 +12,7 @@ import com.capstone.jobvacancyvalidation.data.UserPreferences
 import com.capstone.jobvacancyvalidation.databinding.ActivityLoginBinding
 import com.capstone.jobvacancyvalidation.network.api.ApiConfig
 import com.capstone.jobvacancyvalidation.network.response.LoginResponse
-import com.capstone.jobvacancyvalidation.ui.home.HomeActivity
+import com.capstone.jobvacancyvalidation.ui.MainActivity
 import com.capstone.jobvacancyvalidation.ui.register.RegisterActivity
 import retrofit2.Call
 import retrofit2.Callback
@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
         mPreferences = UserPreferences(this)
 
         if (mPreferences.getToken() != ""){
-            startActivity(Intent((this@LoginActivity), HomeActivity::class.java))
+            startActivity(Intent((this@LoginActivity), MainActivity::class.java))
             finish()
         }
         supportActionBar?.hide()
@@ -69,7 +69,7 @@ class LoginActivity : AppCompatActivity() {
                         binding.pbLogin.visibility = View.INVISIBLE
 
                         Toast.makeText(applicationContext, getString(R.string.success_login), Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
+                        startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                         finish()
                     } else {
 

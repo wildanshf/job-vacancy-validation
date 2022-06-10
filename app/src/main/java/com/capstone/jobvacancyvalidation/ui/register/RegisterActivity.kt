@@ -7,13 +7,10 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.capstone.jobvacancyvalidation.R
-import com.capstone.jobvacancyvalidation.data.Login
 import com.capstone.jobvacancyvalidation.data.Register
 import com.capstone.jobvacancyvalidation.databinding.ActivityRegisterBinding
 import com.capstone.jobvacancyvalidation.network.api.ApiConfig
-import com.capstone.jobvacancyvalidation.network.response.LoginResponse
 import com.capstone.jobvacancyvalidation.network.response.RegisterResponse
-import com.capstone.jobvacancyvalidation.ui.home.HomeActivity
 import com.capstone.jobvacancyvalidation.ui.login.LoginActivity
 import retrofit2.Call
 import retrofit2.Callback
