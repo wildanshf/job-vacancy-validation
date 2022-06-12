@@ -57,10 +57,6 @@ class RegisterActivity : AppCompatActivity() {
                     response: Response<RegisterResponse>
                 ) {
                     if (response.code() == 201) {
-                        val body = response.body()
-
-                        //loginViewModel.saveUser(body?.userid, body?.token)
-
                         binding.registerButton.isEnabled = true
                         binding.pbRegister.visibility = View.INVISIBLE
 

@@ -45,23 +45,12 @@
     <string name="validation_positive_result">Valid Job</string>
     <string name="validate">Validate</string>
     <string name="home_hint">Validate a job vacancy with VALICAT!</string>
-    <string name="home_hint_description">Insert a job vacancy broadcast into the text field above and press the validate button to start the magic!</string>
+    <string name="home_hint_description">Insert a job vacancy broadcast into the text field below and press the validate button to start the magic!</string>
     <string name="paste_button">Paste Button</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="paste_success">Field replaced from clipboard</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_home">VALICAT</string>
+    <string name="title_home">Home</string>
     <string name="title_history">History</string>
     <string name="title_settings">Settings</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="empty_clipboard_warning">Clipboard is empty</string>
 </resources>

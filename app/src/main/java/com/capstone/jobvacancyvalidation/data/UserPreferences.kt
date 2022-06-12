@@ -19,6 +19,18 @@ class UserPreferences (context: Context){
         )!! else ""
     }
 
+    fun setUserId(value: String){
+        editor.putString(USER_ID, value)
+        editor.apply()
+    }
+
+    fun getUserId(): String {
+        return if (preferences.getString(USER_ID, "") != null) preferences.getString(
+            USER_ID,
+            ""
+        )!! else ""
+    }
+
     fun clearPreference() {
         editor.clear()
         editor.apply()
@@ -27,5 +39,6 @@ class UserPreferences (context: Context){
     companion object {
         private const val PREFS_NAME = "user_pref"
         private const val TOKEN = "token"
+        private const val USER_ID = "userid"
     }
 }

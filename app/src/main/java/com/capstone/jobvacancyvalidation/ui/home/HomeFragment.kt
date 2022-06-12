@@ -2,6 +2,7 @@ package com.capstone.jobvacancyvalidation.ui.home
 
 import android.content.ClipboardManager
 import android.content.Context.CLIPBOARD_SERVICE
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -20,15 +21,15 @@ import com.capstone.jobvacancyvalidation.data.UserPreferences
 import com.capstone.jobvacancyvalidation.databinding.FragmentHomeBinding
 import com.capstone.jobvacancyvalidation.network.api.ApiValidationConfig
 import com.capstone.jobvacancyvalidation.network.response.ValidationResponse
+import com.capstone.jobvacancyvalidation.ui.MainActivity
+import com.capstone.jobvacancyvalidation.ui.login.LoginActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import org.w3c.dom.Text
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
-    private lateinit var homeBinding: FragmentHomeBinding
     private lateinit var mPreferences: UserPreferences
     private var myClipboard: ClipboardManager? = null
 
@@ -36,15 +37,14 @@ class HomeFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    override fun onCreateView( inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        val homeViewModel = ViewModelProvider(this)[HomeViewModel::class.java]
-
-        homeBinding = FragmentHomeBinding.inflate(layoutInflater)
-
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
-        return root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -63,7 +63,7 @@ class HomeFragment : Fragment() {
 
 
         val tb = view.findViewById(R.id.tf_parameter) as EditText
-        btnPaste.setOnClickListener {
+        binding.pasteButton.setOnClickListener {
             pasteText()
         }
 
@@ -98,7 +98,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun showValidJobDialog() {
-        MaterialAlertDialogBuilder(requireActivity(), R.style.AlertDialogTheme)
+        MaterialAlertDialogBuilder(requireActivity(), com.google.android.material.R.style.MaterialAlertDialog_Material3)
             .setTitle(resources.getString(R.string.validation_positive_result))
             .setMessage(resources.getString(R.string.logout_dialog_message))
             .setNegativeButton(resources.getString(R.string.cancel)) { dialog, which ->
@@ -111,7 +111,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun showFraudJobDialog() {
-        MaterialAlertDialogBuilder(requireActivity(), R.style.AlertDialogTheme)
+        MaterialAlertDialogBuilder(requireActivity(), com.google.android.material.R.style.MaterialAlertDialog_Material3)
             .setTitle(resources.getString(R.string.validation_negative_result))
             .setMessage(resources.getString(R.string.logout_dialog_message))
             .setNegativeButton(resources.getString(R.string.cancel)) { dialog, which ->
@@ -168,11 +168,12 @@ class HomeFragment : Fragment() {
         val a = myClipboard?.primaryClip
         val item = a?.getItemAt(0)
 
-        binding.tfParameter.text = Editable.Factory.getInstance().newEditable(item?.text)
+        if (item.toString() == "") {
+            Toast.makeText(requireActivity(), getString(R.string.empty_clipboard_warning), Toast.LENGTH_SHORT).show()
+        } else binding.tfParameter.text = Editable.Factory.getInstance().newEditable(item?.text)
     }
 
     private fun clearText() {
-
         binding.tfParameter.text = Editable.Factory.getInstance().newEditable("")
     }
 }

@@ -64,6 +64,7 @@ class LoginActivity : AppCompatActivity() {
                 ) {
                     if (response.code() == 200) {
                         mPreferences.setToken(response.body()!!.token)
+                        mPreferences.setUserId(response.body()!!.userid.toString())
 
                         binding.loginButton.isEnabled = true
                         binding.pbLogin.visibility = View.INVISIBLE

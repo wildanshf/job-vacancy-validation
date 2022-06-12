@@ -4,19 +4,209 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_grey"
     tools:context=".ui.settings.SettingsFragment">
 
-    <TextView
-        android:id="@+id/text_notifications"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+    <RelativeLayout
+        android:id="@+id/rl_profile"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_sample_avatar"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:id="@+id/profile_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/profile_image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/light_grey"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="email@mail.com"
+                android:textColor="@color/very_light_grey"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_navigate_next_24" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_dark_mode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/rl_profile"
+        app:layout_constraintStart_toStartOf="@+id/rl_profile"
+        app:layout_constraintTop_toBottomOf="@+id/rl_profile">
+
+        <ImageView
+            android:id="@+id/ic_dark_mode"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/circle_background"
+            android:padding="5dp"
+            android:src="@drawable/ic_dark_mode" />
+
+        <TextView
+            android:id="@+id/tv_dark_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/ic_dark_mode"
+            android:text="Dark Mode"
+            android:textColor="@color/light_grey"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_navigate_next_24" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_about_us"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/rl_language"
+        app:layout_constraintStart_toStartOf="@+id/rl_language"
+        app:layout_constraintTop_toBottomOf="@+id/rl_language">
+
+        <ImageView
+            android:id="@+id/ic_about_us"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/circle_background"
+            android:padding="5dp"
+            android:src="@drawable/ic_about_us" />
+
+        <TextView
+            android:id="@+id/tv_about_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/ic_about_us"
+            android:text="About Us"
+            android:textColor="@color/light_grey"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_navigate_next_24" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_language"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/rl_dark_mode"
+        app:layout_constraintStart_toStartOf="@+id/rl_dark_mode"
+        app:layout_constraintTop_toBottomOf="@+id/rl_dark_mode">
+
+        <ImageView
+            android:id="@+id/ic_language"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/circle_background"
+            android:padding="5dp"
+            android:src="@drawable/ic_language" />
+
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/ic_language"
+            android:text="Language"
+            android:textColor="@color/light_grey"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_navigate_next_24" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_logout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/rl_about_us"
+        app:layout_constraintStart_toStartOf="@+id/rl_about_us"
+        app:layout_constraintTop_toBottomOf="@+id/rl_about_us">
+
+        <ImageView
+            android:id="@+id/ic_logout"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/circle_background"
+            android:padding="5dp"
+            android:src="@drawable/ic_logout" />
+
+        <TextView
+            android:id="@+id/tv_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/ic_logout"
+            android:text="Logout"
+            android:textColor="@color/light_grey"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_navigate_next_24" />
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
