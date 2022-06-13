@@ -1,6 +1,7 @@
 package com.capstone.jobvacancyvalidation.ui.home
 
 import android.content.ClipboardManager
+import android.content.Context
 import android.content.Context.CLIPBOARD_SERVICE
 import android.content.Intent
 import android.os.Bundle
@@ -50,7 +51,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mPreferences = UserPreferences(requireActivity())
-        myClipboard = requireActivity().getSystemService(CLIPBOARD_SERVICE) as ClipboardManager?
+        myClipboard = requireActivity().getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager?
 
         val token = mPreferences.getToken()
         val btnValidate:Button = view.findViewById(R.id.validate_button)
@@ -165,12 +166,13 @@ class HomeFragment : Fragment() {
     }
 
     private fun pasteText() {
-        val a = myClipboard?.primaryClip
-        val item = a?.getItemAt(0)
+        var pasteData: String = ""
 
-        if (item.toString() == "") {
+        val a = myClipboard?.primaryClip?.getItemAt(0)
+
+        if (a.toString() == "") {
             Toast.makeText(requireActivity(), getString(R.string.empty_clipboard_warning), Toast.LENGTH_SHORT).show()
-        } else binding.tfParameter.text = Editable.Factory.getInstance().newEditable(item?.text)
+        } else binding.tfParameter.text = Editable.Factory.getInstance().newEditable(a?.text)
     }
 
     private fun clearText() {

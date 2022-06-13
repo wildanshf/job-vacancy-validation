@@ -15,7 +15,9 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.capstone.jobvacancyvalidation.R
 import com.capstone.jobvacancyvalidation.data.User
 import com.capstone.jobvacancyvalidation.data.UserPreferences
@@ -48,6 +50,7 @@ class SettingsFragment : Fragment() {
     ): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
 
+
         return binding.root
     }
 
@@ -58,7 +61,21 @@ class SettingsFragment : Fragment() {
         val token = mPreferences.getToken()
         val userId = mPreferences.getUserId().toInt()
 
-        getUserDetail(token, userId)
+        val settingsViewModel =
+            ViewModelProvider(this)[SettingsViewModel::class.java]
+
+        settingsViewModel.name.observe(requireActivity(), Observer { name ->
+            binding.tvName.text = name
+        })
+
+        settingsViewModel.email.observe(requireActivity(), Observer { email ->
+            binding.tvEmail.text = email
+        })
+
+        if (binding.tvName.text == "Name" && binding.tvEmail.text == "email@mail.com"){
+            getUserDetail(token, userId)
+        }
+
         binding.rlAboutUs.setOnClickListener {
 
             startActivity(Intent(requireActivity(), AboutUsActivity::class.java))
@@ -85,6 +102,8 @@ class SettingsFragment : Fragment() {
 
     private fun getUserDetail(tokenAuth: String, userId: Int) {
         Log.d(this@SettingsFragment::class.java.simpleName, tokenAuth)
+        val settingsViewModel =
+            ViewModelProvider(this)[SettingsViewModel::class.java]
         ApiConfig().getApiService().getUserDetail(token = "Bearer $tokenAuth", User(userId))
             .enqueue(object : Callback<UserResponse> {
                 override fun onFailure(call: Call<UserResponse>, t: Throwable) {
@@ -95,8 +114,7 @@ class SettingsFragment : Fragment() {
                     response: Response<UserResponse>
                 ) {
                     if (response.code() == 200) {
-                        binding.tvName.text = response.body()?.name ?: "Name"
-                        binding.tvEmail.text = response.body()?.email ?: "email@mail.com"
+                        settingsViewModel.setUserData(response.body()?.name.toString(), response.body()?.email.toString())
                     } else {
 
                         Toast.makeText(requireActivity(), getString(R.string.invalid_credentials), Toast.LENGTH_SHORT).show()

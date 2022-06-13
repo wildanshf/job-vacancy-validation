@@ -15,8 +15,6 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class HistoryViewModel : ViewModel() {
-
-    private lateinit var mPreferences: UserPreferences
     val listHistory = MutableLiveData<ArrayList<History>?>()
 
     fun setHistory(tokenAuth: String, userid: Int) {

@@ -30,9 +30,9 @@ interface ApiService {
         @Body user: User
     ): Call<UserResponse>
 
-    @GET("history/{userid}")
+    @GET("history")
     fun getUserHistory(
         @Header("Authorization") token: String,
-        @Path("userid") userid : Int
+        @Query("userid") userid : Int
     ): Call<HistoryResponse>
 }

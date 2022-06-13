@@ -1,12 +1,7 @@
 package com.capstone.jobvacancyvalidation.ui.history
 
 import android.annotation.SuppressLint
-import android.content.ClipboardManager
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -46,18 +41,18 @@ class HistoryFragment : Fragment() {
         val token = mPreferences.getToken()
         val userId = mPreferences.getUserId().toInt()
 
+        historyViewModel.setHistory(token, userId)
+
         initRecyclerView()
 
-        historyViewModel.setHistory(token, userId)
+
         historyViewModel.getHistory().observe(requireActivity()) {
             if (it != null) {
                 adapter.setHistoryList(it)
                 adapter.notifyDataSetChanged()
-                showLoading(false)
-            } else {
-                showLoading(false)
             }
         }
+
     }
 
     override fun onDestroyView() {
