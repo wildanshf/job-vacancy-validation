@@ -2,8 +2,6 @@ package com.capstone.jobvacancyvalidation.ui.home
 
 import android.content.ClipboardManager
 import android.content.Context
-import android.content.Context.CLIPBOARD_SERVICE
-import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -16,18 +14,16 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.capstone.jobvacancyvalidation.R
 import com.capstone.jobvacancyvalidation.data.UserPreferences
 import com.capstone.jobvacancyvalidation.databinding.FragmentHomeBinding
 import com.capstone.jobvacancyvalidation.network.api.ApiValidationConfig
 import com.capstone.jobvacancyvalidation.network.response.ValidationResponse
-import com.capstone.jobvacancyvalidation.ui.MainActivity
-import com.capstone.jobvacancyvalidation.ui.login.LoginActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -99,27 +95,24 @@ class HomeFragment : Fragment() {
     }
 
     private fun showValidJobDialog() {
-        MaterialAlertDialogBuilder(requireActivity(), com.google.android.material.R.style.MaterialAlertDialog_Material3)
+        MaterialAlertDialogBuilder(requireActivity(), R.style.AlertDialogTheme)
+            .setIcon(R.drawable.ic_real_job)
             .setTitle(resources.getString(R.string.validation_positive_result))
-            .setMessage(resources.getString(R.string.logout_dialog_message))
-            .setNegativeButton(resources.getString(R.string.cancel)) { dialog, which ->
-                // Respond to neutral button press
-            }
-            .setPositiveButton(resources.getString(R.string.logout)) { dialog, which ->
-                // Respond to positive button press
+            .setMessage(resources.getString(R.string.validation_positive_dialog_message))
+            .setPositiveButton("OK") { _, _ ->
+
             }
             .show()
+
     }
 
     private fun showFraudJobDialog() {
-        MaterialAlertDialogBuilder(requireActivity(), com.google.android.material.R.style.MaterialAlertDialog_Material3)
+        MaterialAlertDialogBuilder(requireActivity(), R.style.AlertDialogTheme)
+            .setIcon(R.drawable.ic_fraud_job)
             .setTitle(resources.getString(R.string.validation_negative_result))
-            .setMessage(resources.getString(R.string.logout_dialog_message))
-            .setNegativeButton(resources.getString(R.string.cancel)) { dialog, which ->
-                // Respond to neutral button press
-            }
-            .setPositiveButton(resources.getString(R.string.logout)) { dialog, which ->
-                // Respond to positive button press
+            .setMessage(resources.getString(R.string.validation_negative_dialog_message))
+            .setPositiveButton("OK") { _, _ ->
+
             }
             .show()
     }
@@ -166,7 +159,6 @@ class HomeFragment : Fragment() {
     }
 
     private fun pasteText() {
-        var pasteData: String = ""
 
         val a = myClipboard?.primaryClip?.getItemAt(0)
 

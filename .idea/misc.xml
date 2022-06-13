@@ -33,8 +33,11 @@
         <entry key="..\:/Users/Nirvana/Desktop/Capstone/job-vacancy-validation/app/src/main/res/layout/fragment_settings.xml" value="0.2" />
         <entry key="..\:/Users/Nirvana/Desktop/Capstone/job-vacancy-validation/app/src/main/res/layout/item_row_history.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Nirvana/Desktop/Capstone/job-vacancy-validation/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25" />
+        <entry key="..\:/Users/Nirvana/Desktop/Mobile Application/job-vacancy-validation/app/src/main/res/drawable/ic_fraud_job.xml" value="0.121" />
+        <entry key="..\:/Users/Nirvana/Desktop/Mobile Application/job-vacancy-validation/app/src/main/res/drawable/ic_real_job.xml" value="0.121" />
+        <entry key="..\:/Users/Nirvana/Desktop/Mobile Application/job-vacancy-validation/app/src/main/res/layout/fragment_history.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Nirvana/Desktop/Mobile Application/job-vacancy-validation/app/src/main/res/layout/item_row_history.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/drawable/circular_image_bg.xml" value="0.179" />
-        <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/drawable/ic_about_us.xml" value="0.2265" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.179" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/drawable/ic_coming_soon.xml" value="0.179" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/drawable/ic_launcher_background.xml" value="0.141" />
@@ -42,19 +45,15 @@
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/drawable/ic_register_banner.xml" value="0.1" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/drawable/image_shadow.xml" value="0.179" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/drawable/rounded_bg.xml" value="0.141" />
-        <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/layout-v26/activity_about_us.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/layout-v28/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/layout/activity_about_us.xml" value="0.25" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/layout/activity_home.xml" value="0.4" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/layout/activity_profile.xml" value="0.536" />
-        <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/layout/activity_profile_edit.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/layout/activity_register.xml" value="0.1" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/layout/activity_splash.xml" value="0.6" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/layout/activity_validation.xml" value="0.264" />
-        <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/layout/fragment_history.xml" value="0.2" />
-        <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/layout/fragment_settings.xml" value="0.25" />
+        <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/layout/fragment_history.xml" value="0.109375" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/layout/item_row_history.xml" value="0.19722222222222222" />
         <entry key="..\:/Users/wilda/OneDrive/Documents/~Tugas Kuliah/BANGKIT/Job Vacancy Validation/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.141" />
       </map>

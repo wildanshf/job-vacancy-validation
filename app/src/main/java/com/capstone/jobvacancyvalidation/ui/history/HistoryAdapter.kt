@@ -2,6 +2,7 @@ package com.capstone.jobvacancyvalidation.ui.history
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.app.ActivityOptionsCompat
@@ -32,8 +33,15 @@ class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>() 
             binding.apply {
                 tvInput.text = data.input
                 tvOutput.text = data.output
+                if (data.output == "Real Job"){
+                    tvOutput.setTextColor(Color.parseColor("#00ADB5"))
+                } else if (data.output == "Fraud Job") {
+                    tvOutput.setTextColor(Color.parseColor("#FC0000"))
+                }
 
             }
+
+
 
         }
     }

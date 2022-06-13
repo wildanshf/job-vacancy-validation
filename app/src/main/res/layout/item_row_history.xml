@@ -21,28 +21,29 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:textSize="16sp"
-            android:textStyle="bold"
             android:textColor="@color/light_grey"
-            android:transitionName="parameter1"
+            android:textSize="16sp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_output"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:text="INPUT" />
+            tools:text="tokomedia is delighted to offer you the full-time position of software engineer with an anticipated start date of januari 13, contingent upon drug screening." />
 
         <TextView
             android:id="@+id/tv_output"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:textColor="@color/light_grey"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="@color/light_grey"
             android:transitionName="parameter2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_input"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_input"
             app:layout_constraintEnd_toEndOf="parent"
-            tools:text="OUTPUT" />
+            app:layout_constraintTop_toTopOf="@+id/tv_input"
+            tools:text="Valid Job" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

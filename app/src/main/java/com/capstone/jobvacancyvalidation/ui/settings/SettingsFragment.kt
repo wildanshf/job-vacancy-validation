@@ -4,6 +4,7 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
@@ -76,6 +77,18 @@ class SettingsFragment : Fragment() {
             getUserDetail(token, userId)
         }
 
+        binding.rlProfile.setOnClickListener {
+            Toast.makeText(requireActivity(), "Coming Soon!", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.rlDarkMode.setOnClickListener {
+            Toast.makeText(requireActivity(), "Coming Soon!", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.rlLanguage.setOnClickListener {
+            startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
+        }
+
         binding.rlAboutUs.setOnClickListener {
 
             startActivity(Intent(requireActivity(), AboutUsActivity::class.java))
@@ -85,9 +98,9 @@ class SettingsFragment : Fragment() {
             MaterialAlertDialogBuilder(requireActivity(), R.style.AlertDialogTheme)
                 .setTitle(resources.getString(R.string.logout_dialog_title))
                 .setMessage(resources.getString(R.string.logout_dialog_message))
-                .setNegativeButton(resources.getString(R.string.cancel)) { dialog, which ->
+                .setNegativeButton(resources.getString(R.string.cancel)) { _, _ ->
                 }
-                .setPositiveButton(resources.getString(R.string.logout)) { dialog, which ->
+                .setPositiveButton(resources.getString(R.string.logout)) { _, _ ->
                     mPreferences.clearPreference()
                     startActivity(Intent(requireActivity(), LoginActivity::class.java))
                 }

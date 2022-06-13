@@ -36,10 +36,40 @@
         <item name="colorSurface">#212121</item>
         <item name="materialAlertDialogTitleTextStyle">@style/TitleTextStyle</item>
         <item name="materialAlertDialogBodyTextStyle">@style/BodyTextStyle</item>
+        <item name="buttonBarNeutralButtonStyle">@style/NeutralButtonStyle</item>
         <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
         <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
         <item name="shapeAppearanceMediumComponent">@style/RoundShapeAppearance</item>
     </style>
+
+    <style name="ValidationResultDialogTheme" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorSurface">#212121</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/ValidationResultTitleTextStyle</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/ValidationResultBodyTextStyle</item>
+        <item name="buttonBarNeutralButtonStyle">@style/NeutralButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="shapeAppearanceMediumComponent">@style/RoundShapeAppearance</item>
+        <item name="materialAlertDialogTitlePanelStyle">@style/ValidationResultTitlePanelStyle</item>
+    </style>
+
+    <style name="ValidationResultTitlePanelStyle" parent="MaterialAlertDialog.Material3.Title.Panel">
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="ValidationResultTitleTextStyle" parent="MaterialAlertDialog.Material3.Title.Text">
+        <item name="android:textColor">#fafafa</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="ValidationResultBodyTextStyle" parent="MaterialAlertDialog.Material3.Body.Text">
+        <item name="android:textColor">#c7c7c7</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
     <style name="TitleTextStyle" parent="MaterialAlertDialog.Material3.Title.Text">
         <item name="android:textColor">#fafafa</item>
         <item name="android:textStyle">bold</item>
@@ -50,13 +80,30 @@
         <item name="android:textSize">14sp</item>
     </style>
     <style name="PositiveButtonStyle" parent="Widget.Material3.Button.TextButton.Dialog">
-        <item name="android:textColor">#d81b60</item>
-        <item name="rippleColor">#ad1457</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/light_blue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="rippleColor">#00F3FF</item>
     </style>
+    <style name="NeutralButtonStyle" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/light_blue</item>
+        <item name="android:textStyle">bold</item>
+        <item name="rippleColor">#00F3FF</item>
+    </style>
+
+    <style name="NeutralButtonStyle2" parent="Widget.Material3.Button.TextButton">
+        <item name="android:gravity">center</item>
+    </style>
+
     <style name="NegativeButtonStyle" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">#757575</item>
+        <item name="android:textStyle">bold</item>
         <item name="rippleColor">#a4a4a4</item>
     </style>
+
+
     <style name="RoundShapeAppearance" parent="ShapeAppearance.Material3.MediumComponent">
 
         <item name="cornerFamily">rounded</item>
